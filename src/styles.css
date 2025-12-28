@@ -1,0 +1,142 @@
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
+/* You can add global styles to this file, and also import other style files */
+
+/* Police globale */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body, input, button, select, textarea {
+  font-family: 'Inter', sans-serif;
+  color: #000; /* Texte principal noir */
+  background-color: rgba(255, 255, 255, 0.95); /* Fond clair/translucide */
+}
+
+/* Cartes */
+.card {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Boutons */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #8B0000; /* Rouge foncé */
+  border-color: #8B0000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #a30000;
+  border-color: #a30000;
+}
+
+.btn-info {
+  background-color: #1E90FF;
+  border-color: #1E90FF;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #1C86EE;
+  border-color: #1C86EE;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.btn-outline-danger {
+  color: #8B0000;
+  border-color: #8B0000;
+}
+
+.btn-outline-danger:hover {
+  background-color: #8B0000;
+  color: #fff;
+}
+
+/* Badges */
+.badge {
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Tableaux */
+.table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.table th {
+  background-color: rgba(0,0,0,0.05);
+  color: #000;
+}
+
+.table td {
+  color: #000;
+}
+
+/* Inputs & Form Controls */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #8B0000;
+  box-shadow: 0 0 4px rgba(139,0,0,0.4);
+  outline: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0,0,0,0.85); /* Fond noir transparent */
+}
+
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: #ff4d4d; /* Rouge vif au hover */
+}
+
+/* Graphiques (Chart.js) */
+canvas {
+  max-height: 350px;
+}
+
+/* Spinner */
+.spinner-border {
+  color: #8B0000; /* Rouge foncé */
+}

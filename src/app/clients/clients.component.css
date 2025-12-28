@@ -1,0 +1,121 @@
+/* خلفية الكارد و الظل */
+.card {
+  background: rgba(124, 58, 237, 0.1); /* بنفسجي فاتح وشفاف */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* هيدر الكارد */
+.card-header {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+  border-radius: 15px 15px 0 0;
+  font-weight: 700;
+  color: #EDE9FE; /* بنفسجي فاتح */
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-header i {
+  font-size: 1.5rem;
+  color: #FBBF24; /* أصفر ذهبي للأيقونة */
+}
+
+/* حاوية الفورم input-group */
+.input-group-text {
+  background-color: #7C3AED !important; /* بنفسجي */
+  border: none !important;
+  color: #FBBF24 !important; /* أصفر ذهبي */
+  font-size: 1.1rem;
+}
+
+.form-control {
+  border: 1.5px solid #7C3AED !important; /* إطار بنفسجي */
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #FBBF24 !important; /* أصفر ذهبي عند التركيز */
+  box-shadow: 0 0 12px #FBBF24;
+  outline: none;
+}
+
+/* زر البحث */
+.btn-danger {
+  background-color: #FBBF24 !important; /* أصفر ذهبي */
+  border-color: #FBBF24 !important;
+  font-weight: 700;
+  color: #3B0764 !important; /* بنفسجي غامق للنص */
+  box-shadow: 0 0 15px #FBBF24;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #D4AF37 !important; /* أصفر ذهبي أفتح عند المرور */
+  color: #2C0344 !important;
+  box-shadow: 0 0 25px #D4AF37;
+}
+
+/* جدول */
+.table {
+  background: rgba(124, 58, 237, 0.05); /* خلفية بنفسجية خفيفة */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.1);
+}
+
+.table thead {
+  background: #7C3AED; /* بنفسجي */
+  color: #EDE9FE; /* نص بنفسجي فاتح */
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(124, 58, 237, 0.15);
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  border-top: none;
+}
+
+/* أزرار الإجراء (edit, save, cancel, delete) */
+.btn-outline-secondary {
+  color: #7C3AED !important;
+  border-color: #7C3AED !important;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #7C3AED !important;
+  color: #EDE9FE !important;
+}
+
+.btn-danger {
+  font-weight: 600;
+}
+
+/* أزرار الـ wallet */
+.btn-danger.me-1 i, .btn-danger.me-1 {
+  margin-right: 4px;
+}
+
+/* النص داخل التابل */
+.text-muted {
+  color: #5B21B6 !important; /* بنفسجي غامق */
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+  color: #3B0764 !important; /* بنفسجي غامق */
+}
+
+/* إدخالات التحرير بحدود بنفسجية */
+.form-control.border-danger {
+  border-color: #7C3AED !important; /* بنفسجي بدل الأحمر */
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.7);
+}
