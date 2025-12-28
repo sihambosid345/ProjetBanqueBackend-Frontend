@@ -1,0 +1,67 @@
+<div class="container mt-3">
+  <div class="card shadow-sm border-0">
+    <div class="card-header bg-dark text-white border-0">
+      <h5 class="mb-0">
+        <i class="bi bi-people me-2"></i>
+        Gestion des Clients
+      </h5>
+    </div>
+    <div class="card-body">
+
+      <form [formGroup]="searchformGroup" (ngSubmit)="handleSearchClients()">
+        <div class="input-group mb-3">
+          <span class="input-group-text bg-light border-0">
+            <i class="bi bi-search"></i>
+          </span>
+          <input type="text" formControlName="keyword" class="form-control border-0 shadow-sm" placeholder="Rechercher un client...">
+          <button class="btn btn-danger" type="submit">
+            Rechercher
+          </button>
+        </div>
+      </form>
+
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="bg-light">
+          <tr>
+            <th class="text-dark">ID</th>
+            <th class="text-dark">Nom</th>
+            <th class="text-dark">Email</th>
+            <th class="text-dark">Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let client of clients | async; trackBy: trackByClientId">
+            <td class="text-muted">{{ client.id }}</td>
+            <td class="fw-semibold text-dark">{{ client.nom }}</td>
+            <td class="text-muted">{{ client.email }}</td>
+
+            <td>
+              <button class="btn btn-sm btn-outline-secondary me-1" (click)="handleEditClient(client)">
+                <i class="bi bi-pencil"></i>
+              </button>
+
+              <button class="btn btn-sm btn-outline-danger me-1" (click)="handleDeleteClient(client)">
+                <i class="bi bi-trash"></i>
+              </button>
+
+              <button class="btn btn-sm btn-danger" (click)="handleClientAccounts(client)">
+                <i class="bi bi-wallet2 me-1"></i>
+                Comptes
+              </button>
+            </td>
+          </tr>
+
+          <tr *ngIf="(clients | async)?.length === 0">
+            <td colspan="4" class="text-center text-muted py-4">
+              <i class="bi bi-inbox fs-2 d-block mb-2"></i>
+              Aucun client trouvé
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,222 @@
+/* ============================================
+   CARTE PRINCIPALE
+============================================ */
+.card {
+  background: rgba(124, 58, 237, 0.1) !important;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4) !important;
+}
+
+/* ============================================
+   HEADER DE LA CARTE
+============================================ */
+.card-header {
+  background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%) !important;
+  border-radius: 15px 15px 0 0 !important;
+  padding: 1.25rem;
+  font-weight: 700;
+  color: #EDE9FE !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.5);
+  border: none !important;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FBBF24 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   BODY DE LA CARTE
+============================================ */
+.card-body {
+  background: rgba(124, 58, 237, 0.05) !important;
+  padding: 2rem;
+  border-radius: 0 0 15px 15px;
+}
+
+/* ============================================
+   LABELS DES FORMULAIRES
+============================================ */
+.form-label {
+  color: #3B0764 !important;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   INPUTS DES FORMULAIRES
+============================================ */
+.form-control {
+  border: 2px solid #7C3AED !important;
+  border-radius: 10px;
+  padding: 0.85rem;
+  transition: all 0.3s ease;
+  background-color: #FFFFFF;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.2);
+}
+
+.form-control:focus {
+  border-color: #FBBF24 !important;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.5) !important;
+  outline: none;
+  background-color: #FFFBEB;
+}
+
+.form-control.border-danger {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.4) !important;
+}
+
+.form-control::placeholder {
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* ============================================
+   MESSAGES D'ERREUR
+============================================ */
+.text-danger {
+  color: #DC2626 !important;
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   BOUTON SUBMIT
+============================================ */
+.btn-danger {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%) !important;
+  border: none !important;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #3B0764 !important;
+  box-shadow: 0 5px 15px rgba(251, 191, 36, 0.4);
+  font-size: 1rem;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.6);
+  color: #2C0344 !important;
+}
+
+.btn-danger:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.5);
+}
+
+.btn-danger:disabled {
+  background: linear-gradient(135deg, #D1D5DB 0%, #9CA3AF 100%) !important;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  color: #6B7280 !important;
+}
+
+/* ============================================
+   OMBRES ET EFFETS
+============================================ */
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3) !important;
+}
+
+/* ============================================
+   SPACING
+============================================ */
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .card {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-header h5 {
+    font-size: 1.25rem;
+  }
+
+  .form-control {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-danger {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   ANIMATIONS SUPPLÉMENTAIRES
+============================================ */
+.form-control:hover {
+  border-color: #8B5CF6;
+}
+
+.form-control.border-danger:focus {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.5) !important;
+}
+
+/* États de validation */
+.form-control:valid:not(:placeholder-shown) {
+  border-color: #10B981;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2310B981' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+/* ============================================
+   FOCUS VISIBLE POUR ACCESSIBILITÉ
+============================================ */
+.btn-danger:focus-visible,
+.form-control:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.4);
+  outline-offset: 2px;
+}
